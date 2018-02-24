@@ -25,11 +25,25 @@ from sklearn.svm import SVC
 # create classifier
 clf = SVC(kernel='linear')
 
+# training start time
+training_start_time = time()
+
 # train the classifier
 clf.fit(features_train, labels_train)
 
+# training time in seconds
+print "Training time: ", round(time() - training_start_time, 3), "s"
+
+# prediction start time
+prediction_start_time = time()
+
 # make predictions
 pred = clf.predict(features_test)
+
+# prediction time in seconds
+print "Prediction time: ", round(time() - prediction_start_time, 3), "s"
+
+# prediction
 print pred
 
 # import accuracy score
