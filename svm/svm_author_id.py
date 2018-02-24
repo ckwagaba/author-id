@@ -22,8 +22,8 @@ features_train, features_test, labels_train, labels_test = preprocess()
 # import SVC
 from sklearn.svm import SVC
 
-# create classifier
-clf = SVC(kernel='rbf')
+# create classifier: C gotta be uppercase
+clf = SVC(kernel='rbf', C=10000)
 
 # training start time
 training_start_time = time()
