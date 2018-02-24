@@ -23,7 +23,7 @@ features_train, features_test, labels_train, labels_test = preprocess()
 from sklearn.svm import SVC
 
 # create classifier
-clf = SVC(kernel='linear')
+clf = SVC(kernel='rbf')
 
 # training start time
 training_start_time = time()
