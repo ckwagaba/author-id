@@ -29,8 +29,8 @@ clf = SVC(kernel='rbf', C=10000)
 training_start_time = time()
 
 # slice the training dataset down
-# features_train = features_train[:len(features_train)/100]
-# labels_train = labels_train[:len(labels_train)/100]
+features_train = features_train[:len(features_train)/100]
+labels_train = labels_train[:len(labels_train)/100]
 
 # train the classifier
 clf.fit(features_train, labels_train)
@@ -49,6 +49,15 @@ print "Prediction time: ", round(time() - prediction_start_time, 3), "s"
 
 # prediction
 print pred
+
+# class of 10th
+print pred[10]
+
+# class of 26th
+print pred[26]
+
+# class of 50th
+print pred[50]
 
 # import accuracy score
 from sklearn.metrics import accuracy_score
