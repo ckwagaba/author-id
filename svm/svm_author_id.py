@@ -29,8 +29,8 @@ clf = SVC(kernel='rbf', C=10000)
 training_start_time = time()
 
 # slice the training dataset down
-features_train = features_train[:len(features_train)/100]
-labels_train = labels_train[:len(labels_train)/100]
+# features_train = features_train[:len(features_train)/100]
+# labels_train = labels_train[:len(labels_train)/100]
 
 # train the classifier
 clf.fit(features_train, labels_train)
@@ -58,6 +58,15 @@ print pred[26]
 
 # class of 50th
 print pred[50]
+
+# Chris (1) emails predicted
+chris_emails = []
+
+for event in pred:
+    if event == 1:
+        chris_emails.append(event)
+
+print len(chris_emails)
 
 # import accuracy score
 from sklearn.metrics import accuracy_score
