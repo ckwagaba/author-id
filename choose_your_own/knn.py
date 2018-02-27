@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+# configure the 'backend' here
+import matplotlib as mpl
+mpl.use('TkAgg')
+
 import matplotlib.pyplot as plt
 from prep_terrain_data import makeTerrainData
 from class_vis import prettyPicture
