@@ -20,15 +20,29 @@ from email_preprocess import preprocess
 features_train, features_test, labels_train, labels_test = preprocess()
 
 # number of training features from the numpy (matrix-like) array
-print len(features_train[0])
+print "Number of training features: ", len(features_train[0])
 
-# from sklearn import tree
-# from sklearn.metrics import accuracy_score
-#
-# clf = tree.DecisionTreeClassifier(min_samples_split=40)
-# clf.fit(features_train, labels_train)
-# pred = clf.predict(features_test)
-#
-# score = accuracy_score(labels_test, pred)
-#
-# print score
+from sklearn import tree
+from sklearn.metrics import accuracy_score
+
+clf = tree.DecisionTreeClassifier(min_samples_split=40)
+
+# training start time
+training_start_time = time()
+
+clf.fit(features_train, labels_train)
+
+# training time in seconds
+print "Training time: ", round(time() - training_start_time, 3), "s"
+
+# prediction start time
+prediction_start_time = time()
+
+pred = clf.predict(features_test)
+
+# prediction time in seconds
+print "Prediction time: ", round(time() - prediction_start_time, 3), "s"
+
+score = accuracy_score(labels_test, pred)
+
+print score
