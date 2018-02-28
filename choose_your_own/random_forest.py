@@ -38,6 +38,7 @@ clf.fit(features_train, labels_train)
 pred = clf.predict(features_test)
 print pred
 
+# accuracy keeps changing due to the random nature
 acc = accuracy_score(labels_test, pred)
 print acc
 
