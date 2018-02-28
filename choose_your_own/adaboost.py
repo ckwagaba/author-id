@@ -41,7 +41,7 @@ print pred
 acc = accuracy_score(labels_test, pred)
 print acc
 
-# try:
-#     prettyPicture(clf, features_test, labels_test)
-# except NameError:
-#     pass
+try:
+    prettyPicture(clf, features_test, labels_test)
+except NameError:
+    pass
