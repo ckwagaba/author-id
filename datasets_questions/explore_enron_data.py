@@ -19,4 +19,10 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
-print enron_data["METTS MARK"]["salary"]
+poi = 0
+
+for p in enron_data:
+    if enron_data[p]["poi"] == 1:
+        poi += 1
+
+print poi
