@@ -22,7 +22,7 @@ enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r")
 have_NaN_for_total_payments = 0
 
 for p in enron_data:
-    if enron_data[p]["total_payments"] == "NaN":
+    if enron_data[p]["total_payments"] == "NaN" and enron_data[p]["poi"] == True:
         have_NaN_for_total_payments += 1
 
 print (float(have_NaN_for_total_payments) / len(enron_data)) * 100
