@@ -19,10 +19,10 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
-have_email_address = 0
+have_quantified_salary = 0
 
 for p in enron_data:
-    if enron_data[p]["email_address"] != "NaN":
-        have_email_address += 1
+    if enron_data[p]["salary"] != "NaN":
+        have_quantified_salary += 1
 
-print have_email_address
+print have_quantified_salary
