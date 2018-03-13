@@ -19,4 +19,4 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
-print enron_data["SKILLING JEFFREY K"]["exercised_stock_options"]
+print enron_data["LAY KENNETH L"]["total_payments"]
