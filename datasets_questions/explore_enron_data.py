@@ -19,10 +19,10 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
-have_quantified_salary = 0
+have_NaN_for_total_payments = 0
 
 for p in enron_data:
-    if enron_data[p]["salary"] != "NaN":
-        have_quantified_salary += 1
+    if enron_data[p]["total_payments"] == "NaN":
+        have_NaN_for_total_payments += 1
 
-print have_quantified_salary
+print (float(have_NaN_for_total_payments) / len(enron_data)) * 100
