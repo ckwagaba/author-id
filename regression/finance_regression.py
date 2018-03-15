@@ -42,7 +42,11 @@ from sklearn import linear_model
 reg = linear_model.LinearRegression()
 reg.fit(feature_train, target_train)
 
+# the slope
+print reg.coef_
 
+# the intercept
+print reg.intercept_
 
 
 
