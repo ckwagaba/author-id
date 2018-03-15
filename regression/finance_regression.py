@@ -49,7 +49,7 @@ print reg.coef_
 print reg.intercept_
 
 #score
-print reg.score(feature_train, target_train)
+print reg.score(feature_test, target_test)
 
 
 
